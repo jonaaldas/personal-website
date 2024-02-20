@@ -4,6 +4,7 @@
 			<h1 class="text-2xl mb-8">{{ post.title }}</h1>
 			<div v-html="post?.content.html" class="space-y-4"></div>
 		</div>
+		{{ post }}
 	</div>
 </template>
 
@@ -13,15 +14,26 @@
 	import {useRoute} from 'vue-router';
 	const url = `http://localhost:2525/api/blog`;
 	const route = useRoute();
-	const post = ref('');
+
+	export interface Post {
+		title: string;
+		content: Content;
+	}
+
+	export interface Content {
+		markdown: string;
+		html: string;
+	}
+
+	const post = ref<Post>();
+
 	async function getBlogPostBySlug() {
 		const {data} = await axios.get(`${url}/${route.params.slug}`);
 		post.value = data;
-		console.log('🚀 ~ getBlogPostBySlug ~ data:', data);
 	}
+
 	onMounted(async () => {
 		await getBlogPostBySlug();
-		console.log(post.value);
 	});
 </script>
 
