@@ -90,3 +90,5 @@ router.get('/api/blog/:slug', async ctx => {
 app.listen(2525, () => {
 	console.log('Now listening from port 2525, go to http://localhost:2525');
 });
+
+export default app;
