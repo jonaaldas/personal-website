@@ -1,5 +1,5 @@
 <template>
-	<footer class="footer items-center p-4 bg-black text-neutral-content flex justify-center">
+	<footer class="footer items-center p-4 bg-base-100 text-neutral-content flex justify-center">
 		<div class="container">
 			<aside class="items-center grid-flow-col">
 				<h1>ALDAS</h1>

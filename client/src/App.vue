@@ -1,7 +1,9 @@
 <template>
-	<NavBar />
-	<router-view></router-view>
-	<Footer />
+	<div class="min-h-screen">
+		<NavBar />
+		<router-view></router-view>
+		<Footer class="sticky top-[100vh]" />
+	</div>
 </template>
 
 <script setup lang="ts">
