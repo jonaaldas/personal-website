@@ -15,14 +15,26 @@
 				</div>
 			</div>
 		</div>
+		{{ posts }}
 	</div>
 </template>
 
 <script setup lang="ts">
 	import {ref, onMounted} from 'vue';
 	import axios from 'axios';
-	const posts = ref([]);
+	const posts = ref<Posts[]>([]);
 	const url = `http://localhost:2525/api/blogs`;
+
+	export interface Posts {
+		node: Node;
+	}
+
+	export interface Node {
+		title: string;
+		brief: string;
+		url: string;
+		slug: string;
+	}
 	async function getAllPosts() {
 		const {data} = await axios.get(url);
 		posts.value = data;
