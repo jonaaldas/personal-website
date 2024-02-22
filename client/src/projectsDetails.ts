@@ -13,7 +13,7 @@ const projects: Projects[] = [
 		title: 'Roammies',
 		description: 'A data base that helps digital nomad families with kids find local short term daycares all around the world.',
 		stack: 'Nuxt 3, TS, Tailwind, DaisiUI, Mysql, AWS SES',
-		url: 'https://roammis.com',
+		url: 'https://cute-kataifi-536829.netlify.app',
 		github: 'https://www.github.com/',
 		image: '/'
 	},
