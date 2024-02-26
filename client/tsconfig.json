@@ -3,12 +3,7 @@
 	"references": [
 		{
 			"path": "./tsconfig.node.json"
-		},
-		{
-			"path": "./tsconfig.app.json"
-		},
-		{
-			"path": "./typed-router.d.ts"
 		}
-	]
+	],
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "typed-router.d.ts", "src/**/*.js"]
 }
