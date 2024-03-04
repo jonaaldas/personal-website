@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-	import projects from '../projectDetails';
+	import projects from '../projectsDetails';
 </script>
 
 <style lang="scss" scoped></style>
